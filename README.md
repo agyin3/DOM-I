@@ -1,46 +1,48 @@
-# DOM I - JavaScript Content Management System
+# DOM I
 
 ## Project Description
-You are going to be emulating a content managment system by controlling the content in the JavaScript file instead of the HTML file. This project is an excercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
 
-You have been provided a [JSON object](js/index.js) with all the necessary data to accomplish this task.  Use dot or bracket notation to traverse the data provided.
+You are going to be emulating a content management system by controlling the content in the JavaScript file instead of the HTML file. This project is an exercise pointed at selecting elements and then updating them without touching the HTML file using the DOM.
 
-**ONE RULE: You cannot update the HTML or CSS files directly.  You must use JavaScript and the DOM only for your tasks today.**
+Compare `src/index.html` against `src/original.html` and notice how `index.html` is lacking text content and other things. The goal is to make the page look the same as `original.html` using JavaScript. You can find a screenshot of the goal in `design-files/desktop-example.png`.
 
-## Set Up The Project With Git
+Inside `src/index.js` there is declared an object literal containing all the data needed to make the page look like the screenshot. Do not change this object! Below the declaration you should perform your DOM manipulations. Typically you would select an element and then use the data inside the object to add text content to it, or to change its attributes. Access the data using dot or square-bracket notation.
 
-**Follow these steps to set up and work on your project:**
+**THE MOST IMPORTANT RULE: You cannot update the HTML file directly. You must use JavaScript alone.**
+
+## Git Setup
 
 * [ ] Create a forked copy of this project.
-* [ ] Add your project manager as collaborator on Github.
-* [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [ ] Clone your OWN version of the repository.
+* [ ] Push commits: `git push origin main`.
 
-**Follow these steps for completing your project.**
+## Running the project
 
-* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into master.
+* [ ] Run `npm install` to download the project's dependencies.
+* [ ] Run `npm start` to launch the page on `http://localhost:3000`.
+* [ ] Run `npm test` to execute auto tests against your work (you'll need a new terminal window).
 
-## Task 1: Create selectors to point your data into elements
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images.  Use the IDs to update src path content
+## MVP
 
-## Task 2: Update the HTML with the JSON data
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+### Create selectors to access the relevant elements
 
-## Task 3: Add new content
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [ ] Declare variables pointing to the relevant DOM elements, using any of the selectors you have learned.
 
-## Stretch Goals
-* [ ] Update styles throughout the page as you see fit.  Study what happens when you updated the DOM using style in JavaScript.  
-* [ ] Study tomorrow's lesson on events and try to integrate a button that can update content on the site with a click of a button.  You could build a similar data object with new values to help you test the click event.
+### Add text contents
 
-## Stretch Project: Digital Timer
-This project is heavier on logic but employs some DOM manipulation to achieve it's goals.  Go check it out here: [stretch assignment](stretch-assignment) and see how far you can get. 
+* [ ] Using your selectors, update the text contents of the relevant elements, matching the design file.
+* [ ] Find the correct texts for the elements inside the data object in `src/index.js`.
+
+### Add class names
+
+* [ ] Give the anchor tags _inside the nav_ an italic style by adding the classname `italic` to them alone.
+* [ ] Give the anchor tag _inside the footer_ a bolder appearence by adding the classname `bold` to it alone.
+
+### Add image sources
+
+* [ ] Make the img tags on the page display the correct images by editing their `src` attribute.
+* [ ] Find the correct URLs for the images inside the data object in `src/index.js`.
+
+## Submission Format
+
+* [ ] Submit a link to your github repo in canvas.
